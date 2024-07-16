@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-darkblackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body, html{
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    margin: 0;
+    padding: 6.5em;
+    font-size: 13px;
+}
+    
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    gap: 2em;
+    padding: 1em;
+}
+
+.Daniel{
+    background: url(images/bg-pattern-quotation.svg) no-repeat;
+    background-color: var(--Moderateviolet);
+    grid-column: span 2;
+    grid-row: 1;
+    background-position: top right 8em;
+}
+
+.Jonathan{
+    background-color: var(--Very-dark-grayish-blue);
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.Kira{
+    background-color: var(--White);
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+.Jeanette{
+    background-color: var(--White);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.Patrick{
+    background-color: var(--Very-darkblackish-blue);
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.card{
+    padding: 1em 2em 1em 2.5em;
+    border-radius: 1em;
+}
+
+.card img{
+    border-radius: 50%;
+    width: 2em;
+    margin-right: 1.5em;
+}
+
+.card .profileInfo{
+    display: flex;
+    align-items: center;
+}
+
+.card .profileInfo .pinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .profileInfo .pinfo .name{
+    color: var(--White);
+    margin-bottom: -0.8em;
+    margin-top: 1.5em;
+}
+
+.card .profileInfo .pinfo .status{
+    color: var(--Light-gray);
+    font-size: 12px;
+}
+
+.Kira .profileInfo .pinfo .name{
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 600;
+}
+
+.Jeanette .profileInfo .pinfo .name{
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 600;
+}
+
+.card .Description .main{
+    color: var(--White);
+    font-size: 23px;
+    margin-top: -0em;
+    font-weight: 500;
+}
+
+.card .Description .story{
+    color: var(--Light-gray);
+    font-size: 15.2px;
+}
+
+.Kira .Description .main{
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 600;
+}
+
+.Jeanette .Description .main{
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 600;
+}
+
+.Kira .Description .story{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.Jeanette .Description .story{
+    color: var(--Very-dark-grayish-blue);
+}
+
+
+@media (max-width: 550px)
+{
+    body, html{
+        padding: 2em 3em 2em 1em;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+    .Daniel{
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+    
+    .Jonathan{
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    .Jeanette{
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    .Patrick{
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;  
+    }
+
+    .Kira{
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+}
